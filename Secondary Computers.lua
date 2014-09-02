@@ -1,5 +1,15 @@
 mon = peripheral.wrap("top")
 
+function touch2()
+	event, a, b, c = os.pullEvent("monitor_touch")
+
+	if a == front then
+		redstone.setOutput("top", false)
+		os.sleep(3)
+		load()
+	end
+end
+
 function touch()
 	event, a, b, c = os.pullEvent("monitor_touch")
 
@@ -16,21 +26,6 @@ function touch()
 	end
 end
 
-function touch2()
-	event, a, b, c = os.pullEvent("monitor_touch")
-
-	if a == front then
-		redstone.setOutput("top", false)
-		os.sleep(3)
-		load()
-	end
-end
-
-function active()
-	rednet.send(202, "I'm Online!")
-	load()
-end
-
 function load()
 	sleep(5)
 	mon.clear()
@@ -39,7 +34,14 @@ function load()
 	mon.setTextScale(1)
 	mon.setCursorPos(2, 3)
 	mon.write("Ready")
+	touch()
 end
+
+function active()
+	rednet.send(202, "I'm Online!")
+	load()
+end
+
 while true do
 	if rednet.isOpen() == false then
 			rednet.open("left")
