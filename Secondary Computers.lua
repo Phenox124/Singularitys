@@ -3,7 +3,8 @@ mon = peripheral.wrap("top")
 function touch()
 	event, a, b, c = os.pullEvent("monitor_touch")
 
-	if a == front	redstone.setOutput("top", true)
+	if a == front then
+		redstone.setOutput("top", true)
 		os.sleep(3)
 		mon.clear()
 		mon.setBackgroundColor(colors.red)
