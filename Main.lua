@@ -7,6 +7,7 @@ if rednet.isOpen() == false then
 else
 	singu1()
 end
+end
 
 function singu1(error, event, a, b, c)
 	error = "Quantum Link 1 is offline!"
@@ -15,11 +16,11 @@ function singu1(error, event, a, b, c)
 	if a == 203 then
 		singu2()
 	else
-		mon.clear()
 		mon.term.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write(error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write(error)
 end
 
 function singu2(error, event, a, b, c)
@@ -29,11 +30,11 @@ function singu2(error, event, a, b, c)
 	if a == 204 then
 		singu3()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu3(error, event, a, b, c)
@@ -43,11 +44,11 @@ function singu3(error, event, a, b, c)
 	if a == 205 then
 		singu4()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu4(error, event, a, b, c)
@@ -57,11 +58,11 @@ function singu4(error, event, a, b, c)
 	if a == 206 then
 		singu5()
 	else
-		mon.clear()
 		mon.setBackgroundColo7(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu5(error, event, a, b, c)
@@ -71,11 +72,11 @@ function singu5(error, event, a, b, c)
 	if a == 207 then
 		singu6()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu6(error, event, a, b, c)
@@ -85,11 +86,11 @@ function singu6(error, event, a, b, c)
 	if a == 209 then
 		singu7()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu7(error, event, a, b, c)
@@ -99,11 +100,11 @@ function singu7(error, event, a, b, c)
 	if a == 210 then
 		singu8()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu8(error, event, a, b, c)
@@ -113,11 +114,11 @@ function singu8(error, event, a, b, c)
 	if a == 211 then
 		singu9()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu9(error, event, a, b, c)
@@ -127,11 +128,11 @@ function singu9(error, event, a, b, c)
 	if a == 212 then
 		singu10()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
 end
 
 function singu10(error, event, a, b, c)
@@ -139,11 +140,20 @@ function singu10(error, event, a, b, c)
 	error = "Quantum Link 10 is offline!"
 	event, a, b, c = os.pullEvent("rednet_message")
 	if a == 213 then
-		end
+		online()
 	else
-		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.setTextColor(colors.yellow)
-		mon.write("Error: "..error)
+		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.write("Error: "..error)
+end
+
+function online(online)
+	online = "System is operational"
+	mon.setBackgroundColor(colors.lime)
+	mon.setCursorPos(1, 1)
+	mon.clear()
+	mon.write(oneline)
+
 end
