@@ -3,7 +3,7 @@ mon = peripheral.wrap("back")
 function touch2()
 	event, a, b, c = os.pullEvent("monitor_touch")
 
-	if a == back then
+	if a == "back" then
 		redstone.setOutput("top", false)
 		--os.sleep(3)
 		load()
@@ -13,7 +13,7 @@ end
 function touch()
 	event, a, b, c = os.pullEvent("monitor_touch")
 
-	if a == back then
+	if a == "back" then
 		redstone.setOutput("top", true)
 		--os.sleep(3)
 		mon.clear()
