@@ -1,26 +1,25 @@
-wait()
 mon = peripheral.wrap("top")
 
---if rednet.isOpen() == false then
-		--rednet.open("left")
-	--else
-		--active()
-	--end
---end
+if rednet.isOpen() == false then
+		rednet.open("left")
+	else
+		active()
+	end
+end
 
---function active()
-	--rednet.send(202, "I'm Online!")
---end
+function active()
+	rednet.send(202, "I'm Online!")
+	wait()
+end
 
---os.sleep(5)
+os.sleep(5)
 
 function wait()
-	mon.clear()
 	mon.setBackgroundColor(colors.green)
 	mon.clear() --Expecting Number error :|
 	mon.setTextScale(1)
 	mon.setCursorPos(2, 3)
-	mon.wrtie("Ready")
+	mon.write("Ready")
 	touch()
 end
 
@@ -31,7 +30,7 @@ function touch()
 		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.clear()
-		mon.term.setCursorPos(1, 3)
+		mon.setCursorPos(1, 3)
 		mon.write("Working")
 	end
 	if os.pullEvent("monitor_touch") then
