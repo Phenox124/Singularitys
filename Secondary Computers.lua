@@ -17,6 +17,7 @@ mon = peripheral.wrap("top")
 function wait()
 	mon.clear()
 	mon.setBackgroundColor(colors.green)
+	mon.clear() --Expecting Number error :|
 	mon.setTextScale(1)
 	mon.setCursorPos(2, 3)
 	mon.wrtie("Ready")
