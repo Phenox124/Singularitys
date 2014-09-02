@@ -1,4 +1,11 @@
 mon = peripheral.wrap("back")
+
+function online(event)
+	event, a, b, c os.pullEvent("rednet_message")
+	if a == 202 then
+		id = os.getComputerID()
+		rednet.send(202, id)
+end
  
 function touch()
     event, a, b, c = os.pullEvent("monitor_touch")

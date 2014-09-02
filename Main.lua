@@ -154,6 +154,6 @@ function online(online)
 	mon.setBackgroundColor(colors.lime)
 	mon.setCursorPos(1, 1)
 	mon.clear()
-	mon.write(oneline)
+	mon.write(online)
 
 end
