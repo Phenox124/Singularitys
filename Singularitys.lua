@@ -8,7 +8,6 @@ else
 	singu1()
 end
 
-
 function singu1(error, event, a, b, c)
 	error = "Quantum Link 1 is offline!"
 	event, a, b, c = os.pullEvent("rednet_message")
