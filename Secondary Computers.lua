@@ -2,9 +2,7 @@ mon = peripheral.wrap("top")
 
 if rednet.isOpen() == false then
 		rednet.open("left")
-		while true do
-			active()
-		end
+		active()
 	else
 		active()
 end
