@@ -5,6 +5,7 @@ function open()
 		rednet.open("left")
 	else
 		active()
+	end
 end
 
 function active()
