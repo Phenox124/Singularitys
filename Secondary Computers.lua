@@ -28,7 +28,6 @@ end
 
 function load()
 	--sleep(5)
-	mon.clear()
 	mon.setBackgroundColor(colors.green)
 	mon.clear()
 	mon.setTextScale(1)
