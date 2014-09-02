@@ -11,7 +11,11 @@ function touch()
 		mon.clear()
 		mon.setCursorPos(1, 3)
 		mon.write("Working")
+		os.sleep(3)
 	end
+end
+
+function touch2()
 	event, a, b, c = os.pullEvent("monitor_touch")
 
 	if a == front then
@@ -28,21 +32,20 @@ end
 
 function load()
 	sleep(5)
-	mon.clear()
 	mon.setBackgroundColor(colors.green)
 	mon.clear()
 	mon.setTextScale(1)
 	mon.setCursorPos(2, 3)
 	mon.write("Ready")
-	touch()
 end
+while true do
 if rednet.isOpen() == false then
 		rednet.open("left")
 		active()
 	else
 		active()
 end
-
+end
 
 
 
