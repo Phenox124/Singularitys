@@ -13,7 +13,7 @@ function touch()
         end
         event, a, b, c = os.pullEvent("monitor_touch")
  
-        if a == "back" and redstone.getInput("right") == true then
+        if a == "back" and redstone.getOutput("right") == true then
                 redstone.setOutput("right", false)
                 load()
         end
