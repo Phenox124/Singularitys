@@ -4,7 +4,6 @@ if rednet.isOpen() == false then
 		rednet.open("left")
 	else
 		active()
-	end
 end
 
 function active()
