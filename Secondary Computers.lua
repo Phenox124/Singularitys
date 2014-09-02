@@ -12,6 +12,7 @@ function touch()
 		mon.setCursorPos(1, 3)
 		mon.write("Working")
 		os.sleep(3)
+		touch2()
 	end
 end
 
@@ -32,6 +33,7 @@ end
 
 function load()
 	sleep(5)
+	mon.clear()
 	mon.setBackgroundColor(colors.green)
 	mon.clear()
 	mon.setTextScale(1)
@@ -39,12 +41,12 @@ function load()
 	mon.write("Ready")
 end
 while true do
-if rednet.isOpen() == false then
-		rednet.open("left")
-		active()
-	else
-		active()
-end
+	if rednet.isOpen() == false then
+			rednet.open("left")
+			active()
+		else
+			active()
+	end
 end
 
 
