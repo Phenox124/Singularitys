@@ -1,4 +1,4 @@
-mon = peripheral.wrap("top")
+mon = peripheral.wrap("back")
 
 function touch2()
 	event, a, b, c = os.pullEvent("monitor_touch")
