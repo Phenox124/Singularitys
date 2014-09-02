@@ -5,7 +5,7 @@ function touch2()
 
 	if a == front then
 		redstone.setOutput("top", false)
-		os.sleep(3)
+		--os.sleep(3)
 		load()
 	end
 end
@@ -15,19 +15,19 @@ function touch()
 
 	if a == front then
 		redstone.setOutput("top", true)
-		os.sleep(3)
+		--os.sleep(3)
 		mon.clear()
 		mon.setBackgroundColor(colors.red)
 		mon.clear()
 		mon.setCursorPos(1, 3)
 		mon.write("Working")
-		os.sleep(3)
+		--os.sleep(3)
 		touch2()
 	end
 end
 
 function load()
-	sleep(5)
+	--sleep(5)
 	mon.clear()
 	mon.setBackgroundColor(colors.green)
 	mon.clear()
