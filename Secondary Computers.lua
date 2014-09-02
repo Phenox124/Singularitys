@@ -2,6 +2,9 @@ mon = peripheral.wrap("top")
 
 if rednet.isOpen() == false then
 		rednet.open("left")
+		while true do
+			active()
+		end
 	else
 		active()
 end
@@ -11,11 +14,11 @@ function active()
 	wait()
 end
 
-os.sleep(5)
-
 function wait()
+	sleep(5)
+	mon.clear()
 	mon.setBackgroundColor(colors.green)
-	mon.clear() --Expecting Number error :|
+	mon.clear()
 	mon.setTextScale(1)
 	mon.setCursorPos(2, 3)
 	mon.write("Ready")
@@ -24,7 +27,7 @@ end
 
 function touch()
 	if os.pullEvent("monitor_touch") then
-		redstone.setOutput("top", 16)
+		redstone.setOutput("top", true)
 		os.sleep(3)
 		mon.clear()
 		mon.setBackgroundColor(colors.red)
@@ -33,7 +36,7 @@ function touch()
 		mon.write("Working")
 	end
 	if os.pullEvent("monitor_touch") then
-		redstone.setOutput("top", 0)
+		redstone.setOutput("top", false)
 		os.sleep(3)
 		wait()
 	end
