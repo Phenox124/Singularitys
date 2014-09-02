@@ -28,7 +28,7 @@ end
 
 function load()
 	--sleep(5)
-	mon.setBackgroundColor(colors.green)
+	mon.setBackgroundColor(colors.lime)
 	mon.clear()
 	mon.setTextScale(1)
 	mon.setCursorPos(2, 3)
