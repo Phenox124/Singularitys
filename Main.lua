@@ -20,6 +20,7 @@ function singu1(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write(error)
 end
 
@@ -34,6 +35,7 @@ function singu2(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -48,6 +50,7 @@ function singu3(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -62,6 +65,7 @@ function singu4(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -76,6 +80,7 @@ function singu5(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -90,6 +95,7 @@ function singu6(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -104,6 +110,7 @@ function singu7(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -118,6 +125,7 @@ function singu8(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -132,6 +140,7 @@ function singu9(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -146,6 +155,7 @@ function singu10(error, event, a, b, c)
 		mon.setTextColor(colors.yellow)
 		mon.clear()
 		mon.term.setCursorPos(1, 1)
+		mon.setTextScale(5)
 		mon.write("Error: "..error)
 end
 
@@ -153,6 +163,7 @@ function online(online)
 	online = "System is operational"
 	mon.setBackgroundColor(colors.lime)
 	mon.setCursorPos(1, 1)
+	mon.setTextScale(5)
 	mon.clear()
 	mon.write(online)
 
