@@ -57,7 +57,7 @@ function load()
     mon.setTextScale(1)
     mon.setCursorPos(2, 3)
     mon.write("Ready")
-    touch()
+    toggle()
 end
  
 while true do
