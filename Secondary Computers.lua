@@ -26,6 +26,26 @@ function touch()
         load()
     end
 end
+
+function recieve()
+    event, a, b, c = os.pullEvent("rednet_message")
+ 
+    if a == 202 abd b == "toggle" then
+        redstone.setOutput("right", true)
+        mon.clear()
+        mon.setBackgroundColor(colors.red)
+        mon.clear()
+        mon.setCursorPos(1, 3)
+        mon.write("Working")
+    end
+
+    event, a, b, c = os.pullEvent("monitor_touch")
+ 
+    if a == 202 and b == "toggle" and redstone.getOutput("right") == true then
+        redstone.setOutput("right", false)
+        load()
+    end
+end
  
 function active()
     rednet.send(202, "I'm Online!")
