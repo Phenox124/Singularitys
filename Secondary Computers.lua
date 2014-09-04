@@ -59,6 +59,8 @@ function load()
     mon.setCursorPos(2, 3)
     mon.write("Ready")
     touch()
+    os.sleep(.1)
+    recieve()
 end
  
 while true do
