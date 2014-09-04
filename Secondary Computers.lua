@@ -8,7 +8,7 @@ function online(event)
  end
 end
  
-function touch()
+function toggle()
     event, a, b, c = os.pullEvent("monitor_touch")
  
     if a == "back" then
@@ -26,9 +26,7 @@ function touch()
         redstone.setOutput("right", false)
         load()
     end
-end
- 
-function recieve()
+    
     event, a, b, c = os.pullEvent("rednet_message")
  
     if a == 202 and b == "toggle" then
@@ -60,8 +58,6 @@ function load()
     mon.setCursorPos(2, 3)
     mon.write("Ready")
     touch()
-    os.sleep(.1)
-    recieve()
 end
  
 while true do
